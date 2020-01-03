@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Form ,Table } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import './App.css'
 import Typography from '@material-ui/core/Typography';
-import useDarkMode, {darkMode} from 'use-dark-mode';
-
 import DarkModeToggle from './components/darkmode';
+
 class App extends Component {
 
   state = { 
@@ -22,6 +22,7 @@ class App extends Component {
 
  }
 
+
   render() {
     return (
       <div>
@@ -32,24 +33,8 @@ class App extends Component {
       <Form.Control onChange={this.onChange} id="textarea" as="textarea" rows="20"/>
     </Form.Group>
     </Form>
-    <Table responsive variant={darkMode.value ? 'dark' : 'light'} >
-  <thead>
-    <tr>
-      <th>Table heading</th>
-      <th>Table heading</th>
-      <th>Table heading</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Table cell</td>
-      <td>Table cell</td>
-      <td>Table cell</td>
-    </tr>
-    </tbody>
-</Table>
     <DarkModeToggle></DarkModeToggle>
-    </div>
+        </div>
     );
   }
 }
